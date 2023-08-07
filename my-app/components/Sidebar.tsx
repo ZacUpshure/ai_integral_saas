@@ -1,6 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { Montserrat } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const montserrat = Montserrat({
+    weight: "600",
+    subsets: ["latin"]
+});
 
 const Sidebar = () => {
   return (
@@ -10,6 +17,7 @@ const Sidebar = () => {
                 <div className="relative w-16 h-16 mr-4">
                     <Image fill src={'/logo.png'} alt="" />            
                 </div>
+                <h1 className={cn("text-2xl font-bold", montserrat.className)}>Ai Integral</h1>
             </Link>
 
         </div>
